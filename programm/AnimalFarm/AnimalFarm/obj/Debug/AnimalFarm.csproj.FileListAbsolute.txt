@@ -1,0 +1,8 @@
+O:\11 vsCode\oop-aufgabe-m320\programm\AnimalFarm\AnimalFarm\bin\Debug\AnimalFarm.exe.config
+O:\11 vsCode\oop-aufgabe-m320\programm\AnimalFarm\AnimalFarm\bin\Debug\AnimalFarm.exe
+O:\11 vsCode\oop-aufgabe-m320\programm\AnimalFarm\AnimalFarm\bin\Debug\AnimalFarm.pdb
+O:\11 vsCode\oop-aufgabe-m320\programm\AnimalFarm\AnimalFarm\obj\Debug\AnimalFarm.csproj.AssemblyReference.cache
+O:\11 vsCode\oop-aufgabe-m320\programm\AnimalFarm\AnimalFarm\obj\Debug\AnimalFarm.csproj.SuggestedBindingRedirects.cache
+O:\11 vsCode\oop-aufgabe-m320\programm\AnimalFarm\AnimalFarm\obj\Debug\AnimalFarm.csproj.CoreCompileInputs.cache
+O:\11 vsCode\oop-aufgabe-m320\programm\AnimalFarm\AnimalFarm\obj\Debug\AnimalFarm.exe
+O:\11 vsCode\oop-aufgabe-m320\programm\AnimalFarm\AnimalFarm\obj\Debug\AnimalFarm.pdb
