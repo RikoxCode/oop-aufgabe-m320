@@ -25,8 +25,8 @@ namespace AnimalFarm
             // ... (weitere Tiere)
 
             // Farmer erstellen und Farmen zuordnen
-            Farmer farmer1 = new Farmer("Hans Meier");
-            Farmer farmer2 = new Farmer("Jakob Felder");
+            Farmer farmer1 = new Farmer("Hans Jakobli");
+            Farmer farmer2 = new Farmer("Babettli Taburettli");
 
             farmer1.OwnFarm(farm1);
             farmer2.OwnFarm(farm2);
