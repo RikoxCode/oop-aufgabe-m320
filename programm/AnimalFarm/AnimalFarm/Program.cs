@@ -41,7 +41,7 @@ namespace AnimalFarm
             farmer2.AddAnimalToFarm(new Animal("Pferd3"));
             farmer2.AddAnimalToFarm(new Animal("Pferd4"));
             farmer2.AddAnimalToFarm(new Animal("Pferd5"));
-            farmer2.AddAnimalToFarm(new Animal("Schaff1"));
+            farmer2.AddAnimalToFarm(new Animal("Schaf1"));
 
             // Bauern und ihre Farmen anzeigen
             farmer1.DisplayFarmInfo();

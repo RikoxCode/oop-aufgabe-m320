@@ -30,7 +30,7 @@ namespace AnimalFarm
             Console.WriteLine($"   In diesem Gebäude gibt es {Animals.Count} Tiere:");
             foreach (var animal in Animals)
             {
-                Console.WriteLine($"     - {animal.Name}");
+                animal.DisplayInfo();
             }
         }
     }
