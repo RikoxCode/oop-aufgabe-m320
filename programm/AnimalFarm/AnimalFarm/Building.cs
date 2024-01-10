@@ -10,9 +10,29 @@ namespace AnimalFarm
     {
         public List<Animal> Animals { get; set; }
 
+        private List<Vehicle> vehicles;
+
+        private Farmer Farmer;
+
         public Building()
         {
             Animals = new List<Animal>();
+            vehicles = new List<Vehicle>();
+        }
+
+        public void AddVehicle(Vehicle vehicle)
+        {
+            vehicles.Add(vehicle);
+        }
+
+        public Farmer GetOwner()
+        {
+            return this.Farmer;
+        }
+
+        public void SetOwner(Farmer farmer)
+        {
+            this.Farmer = farmer;
         }
 
         public void AddAnimal(Animal animal)
@@ -25,13 +45,25 @@ namespace AnimalFarm
             Animals.Remove(animal);
         }
 
-        public void DisplayAnimals()
+        private void DisplayAnimals()
         {
-            Console.WriteLine($"   In diesem Gebäude gibt es {Animals.Count} Tiere:");
+            Console.WriteLine($"    In diesem Gebäude gibt es {Animals.Count} Tiere:");
             foreach (var animal in Animals)
             {
-                Console.WriteLine($"     - {animal.Name}");
+                Console.WriteLine($"        - {animal.Name}");
             }
+        }
+
+        private void DisplayVehicles()
+        {
+            Console.WriteLine($"    In diesem Gebäude gibt es {this.vehicles.Count} Fahrzeuge");
+        }
+
+        public void DisplayInformations()
+        {
+            Console.WriteLine($"Das ist das Gebäude von {this.Farmer.Name}");
+            this.DisplayVehicles();
+            this.DisplayAnimals();
         }
     }
 }

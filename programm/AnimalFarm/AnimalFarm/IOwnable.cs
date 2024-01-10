@@ -8,6 +8,6 @@ namespace AnimalFarm
 {
     internal interface IOwnable
     {
-        void OwnFarm(Building farm);
+        void AddToBuilding(Building farm);
     }
 }

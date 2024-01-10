@@ -12,9 +12,21 @@ namespace AnimalFarm
 
         public Farmer(string name) : base(name) { }
 
-        public void OwnFarm(Building farm)
+        public void AddToBuilding(Building farm)
         {
             Farm = farm;
+            this.Farm.SetOwner(this);
+        }
+
+        public void SetVehicle(Vehicle vehicle)
+        {
+            if(this.Farm != null)
+            {
+                this.Farm.AddVehicle(vehicle);
+            } else
+            {
+                Console.Write("Farmer does not have any Home! Set first a Building to the Farmer!");
+            }
         }
 
         public void AddAnimalToFarm(Animal animal)
@@ -29,8 +41,7 @@ namespace AnimalFarm
 
         public void DisplayFarmInfo()
         {
-            Console.WriteLine($"\n Bauer {Name} besitzt eine Farm mit folgenden Tieren:");
-            Farm.DisplayAnimals();
+            Farm.DisplayInformations();
         }
     }
 }
