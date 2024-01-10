@@ -206,8 +206,8 @@ namespace AnimalFarm
             farm1.AddAnimal(cow2);
 
             // Farmer erstellen und Farmen zuordnen
-            Farmer farmer1 = new Farmer("Hans Meier");
-            Farmer farmer2 = new Farmer("Jakob Felder");
+            Farmer farmer1 = new Farmer("Hans Jakobli");
+            Farmer farmer2 = new Farmer("Babettli Taburettli");
 
             farmer1.AddToBuilding(farm1);
             farmer2.AddToBuilding(farm2);
@@ -231,7 +231,7 @@ namespace AnimalFarm
             farmer2.AddAnimalToFarm(new Animal("Pferd3"));
             farmer2.AddAnimalToFarm(new Animal("Pferd4"));
             farmer2.AddAnimalToFarm(new Animal("Pferd5"));
-            farmer2.AddAnimalToFarm(new Animal("Schaff1"));
+            farmer2.AddAnimalToFarm(new Animal("Schaf1"));
 
             // Bauern und ihre Farmen anzeigen
             farmer1.DisplayFarmInfo();
