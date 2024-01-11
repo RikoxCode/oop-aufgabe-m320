@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalFarm
 {
-    internal class Vehicle : Entity, IOwnable
+    public class Vehicle : Entity, IOwnable
     {
         public Vehicle(string name) : base(name)
         {

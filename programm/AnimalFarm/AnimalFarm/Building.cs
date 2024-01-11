@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AnimalFarm
 {
-    internal class Building
+    public class Building
     {
-        public List<Animal> Animals { get; set; }
+        private List<Animal> Animals { get; set; }
 
         private List<Vehicle> vehicles;
 
