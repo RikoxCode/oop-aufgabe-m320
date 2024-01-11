@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalFarm
 {
-    internal class Entity
+    public class Entity
     {
         public string Name { get; set; }
 

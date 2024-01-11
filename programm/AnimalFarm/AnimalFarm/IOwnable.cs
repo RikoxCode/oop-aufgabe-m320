@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalFarm
 {
-    internal interface IOwnable
+    public interface IOwnable
     {
         void AddToBuilding(Building farm);
     }

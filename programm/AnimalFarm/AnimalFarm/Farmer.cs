@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalFarm
 {
-    internal class Farmer : Entity, IOwnable
+    public class Farmer : Entity, IOwnable
     {
         public Building Farm { get; set; }
 

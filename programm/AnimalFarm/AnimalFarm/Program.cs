@@ -5,17 +5,19 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using NUnit.Framework;
+using NUnit.Framework.Internal;
 
 namespace AnimalFarm
 {
-    internal class Program
+    public class Program
     {
-        static List<Animal> Animals;
-        static List<Building> Buildings;
-        static List<Farmer> Farmers;
-        static List<Vehicle> Vehicles;
+        private static List<Animal> Animals;
+        private static List<Building> Buildings;
+        private static List<Farmer> Farmers;
+        private static List<Vehicle> Vehicles;
 
-        static Program()
+        public Program()
         {
             Animals = new List<Animal>();
             Buildings = new List<Building>();
@@ -23,7 +25,7 @@ namespace AnimalFarm
             Vehicles = new List<Vehicle>();
         }
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             GetStartMessage();
 
@@ -52,7 +54,7 @@ namespace AnimalFarm
             }
         }
 
-        static void GetSettings()
+        public static void GetSettings()
         {
             Console.Clear();
             Console.WriteLine("1. Add Building");
@@ -62,7 +64,7 @@ namespace AnimalFarm
             Console.WriteLine("5. Get All");
         }
 
-        static bool CheckSettingInput(string input)
+        public static bool CheckSettingInput(string input)
         {
             bool isCorrect;
             switch (input.ToUpper())
@@ -102,7 +104,7 @@ namespace AnimalFarm
             return isCorrect;
         }
 
-        static void ExecuteTask(string task)
+        public static void ExecuteTask(string task)
         {
             switch (task)
             {
@@ -111,7 +113,7 @@ namespace AnimalFarm
                     Buildings.Add(building);
                     Console.Clear();
                     Console.WriteLine("Building wurde hinzugefügt");
-                    Thread.Sleep(500);
+                    Thread.Sleep(1000);
                     break;
 
                 case "2":
@@ -138,7 +140,7 @@ namespace AnimalFarm
                         }
 
                     }
-                    Thread.Sleep(500);
+                    Thread.Sleep(1000);
                     break;
 
                 case "3":
@@ -148,7 +150,7 @@ namespace AnimalFarm
                     string FarmersName = AskUser($"Zu welchem Farmer willst du das {vehicle.Name} zuweisen?");
                     Farmer farmer1 = Farmers.Find(x => x.Name == FarmersName);
                     farmer1.SetVehicle(vehicle);
-                    Thread.Sleep(500);
+                    Thread.Sleep(1000);
                     break;
 
                 case "4":
@@ -156,10 +158,12 @@ namespace AnimalFarm
                     string AnimalName = AskUser("Welches Tier möchtest du erstellen?");
                     Animal animal = new Animal(AnimalName + Animals.Count);
 
+                    Animals.Add(animal);
+
                     string FarmersName2 = AskUser("Zu welchem Farmer möchtest du das Tier zuweisen?");
                     Farmer farmer2 = Farmers.Find(x => x.Name == FarmersName2);
                     farmer2.AddAnimalToFarm(animal);
-                    Thread.Sleep(500);
+                    Thread.Sleep(1000);
                     break;
 
                 case "5":
@@ -176,13 +180,13 @@ namespace AnimalFarm
             }
         }
 
-        static string AskUser(string prompt)
+        public static string AskUser(string prompt)
         {
             Console.WriteLine(prompt);
             return Console.ReadLine();
         }
 
-        static void GetStartMessage()
+        public static void GetStartMessage()
         {
             Console.WriteLine("Hallo bei AnimalFarm!");
 
@@ -191,7 +195,7 @@ namespace AnimalFarm
             Console.Clear();
         }
 
-        static void GetExample()
+        public static void GetExample()
         {
             // Erstellen von Tieren
             Animal cow1 = new Animal("Kuh1");
@@ -236,6 +240,8 @@ namespace AnimalFarm
             // Bauern und ihre Farmen anzeigen
             farmer1.DisplayFarmInfo();
             farmer2.DisplayFarmInfo();
+
+            Console.ReadLine();
         }
     }
 }
