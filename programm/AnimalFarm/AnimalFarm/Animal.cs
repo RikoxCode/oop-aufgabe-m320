@@ -12,7 +12,7 @@ namespace AnimalFarm
 
         public void DisplayInfo()
         {
-            Console.WriteLine($"Tiername: {Name}");
+            Console.WriteLine($"        - {Name}");
         }
     }
 }

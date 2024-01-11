@@ -111,7 +111,7 @@ namespace AnimalFarm
                     Buildings.Add(building);
                     Console.Clear();
                     Console.WriteLine("Building wurde hinzugefügt");
-                    Thread.Sleep(500);
+                    Thread.Sleep(1000);
                     break;
 
                 case "2":
@@ -138,7 +138,7 @@ namespace AnimalFarm
                         }
 
                     }
-                    Thread.Sleep(500);
+                    Thread.Sleep(1000);
                     break;
 
                 case "3":
@@ -148,7 +148,7 @@ namespace AnimalFarm
                     string FarmersName = AskUser($"Zu welchem Farmer willst du das {vehicle.Name} zuweisen?");
                     Farmer farmer1 = Farmers.Find(x => x.Name == FarmersName);
                     farmer1.SetVehicle(vehicle);
-                    Thread.Sleep(500);
+                    Thread.Sleep(1000);
                     break;
 
                 case "4":
@@ -159,7 +159,7 @@ namespace AnimalFarm
                     string FarmersName2 = AskUser("Zu welchem Farmer möchtest du das Tier zuweisen?");
                     Farmer farmer2 = Farmers.Find(x => x.Name == FarmersName2);
                     farmer2.AddAnimalToFarm(animal);
-                    Thread.Sleep(500);
+                    Thread.Sleep(1000);
                     break;
 
                 case "5":
