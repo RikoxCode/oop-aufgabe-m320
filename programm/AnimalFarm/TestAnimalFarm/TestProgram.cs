@@ -14,12 +14,20 @@ namespace TestAnimalFarm
         [Test]
         public void TestCheckSettingsInput()
         {
+            /*
+                Tested Class: Program
+                Tested Func: CheckSettingInput
+            */
             Assert.AreEqual(true, AnimalFarm.Program.CheckSettingInput("2"));
         }
 
         [Test]
         public void Test()
         {
+            /*
+                Tested Class: Building
+                Tested Func: GetOwner & SetOwner
+            */            
             AnimalFarm.Building b = new AnimalFarm.Building();
             AnimalFarm.Farmer farmer1 = new AnimalFarm.Farmer("TestUser1");
 
