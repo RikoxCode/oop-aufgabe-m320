@@ -17,16 +17,13 @@ namespace AnimalFarm
         private static List<Farmer> Farmers;
         private static List<Vehicle> Vehicles;
 
-        public Program()
+        public static void Main(string[] args)
         {
             Animals = new List<Animal>();
             Buildings = new List<Building>();
             Farmers = new List<Farmer>();
             Vehicles = new List<Vehicle>();
-        }
 
-        public static void Main(string[] args)
-        {
             GetStartMessage();
 
             string doExample = AskUser("Sollen wir eine Vorprogrammierte weise verwenden? [Ja(j)/Nein(n)]");
@@ -39,17 +36,17 @@ namespace AnimalFarm
             {
                 Console.Clear();
                 bool isCorrectInput = false;
-                string respons = "";
-                while (respons.ToUpper() != "EXIT")
+                string response = "";
+                while (response.ToUpper() != "EXIT")
                 {
                     do
                     {
                         GetSettings();
-                        respons = AskUser("Wähle eine Zahl!");
-                        isCorrectInput = CheckSettingInput(respons);
+                        response = AskUser("Wähle eine Zahl!");
+                        isCorrectInput = CheckSettingInput(response);
                     } while (!isCorrectInput);
 
-                    ExecuteTask(respons);
+                    ExecuteTask(response);
                 }
             }
         }
@@ -183,7 +180,14 @@ namespace AnimalFarm
         public static string AskUser(string prompt)
         {
             Console.WriteLine(prompt);
-            return Console.ReadLine();
+            string response;
+            do {
+                response = Console.ReadLine();
+                if (response != "")
+                {
+                    return response;
+                }
+            } while (true);
         }
 
         public static void GetStartMessage()

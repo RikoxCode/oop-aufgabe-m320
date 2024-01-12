@@ -22,7 +22,7 @@ namespace TestAnimalFarm
         }
 
         [Test]
-        public void Test()
+        public void TestBuildingSet_GetOwner()
         {
             /*
                 Tested Class: Building
@@ -36,5 +36,25 @@ namespace TestAnimalFarm
             Assert.AreEqual(farmer1, b.GetOwner());
         }
 
+        [Test]
+        public void TestBuildingSetVehicle()
+        {
+            /*
+                Tested Class: Building
+                Tested Func: GetVehicle & SetVehicle
+            */
+            List<AnimalFarm.Vehicle> vehicles = new List<AnimalFarm.Vehicle>();
+
+            AnimalFarm.Building b = new AnimalFarm.Building();
+            AnimalFarm.Vehicle v = new AnimalFarm.Vehicle("TestVehicle");
+            AnimalFarm.Farmer farmer1 = new AnimalFarm.Farmer("TestUser1");
+
+            b.SetOwner(farmer1);
+            farmer1.SetVehicle(v);
+
+            vehicles.Add(v);
+
+            Assert.AreEqual(vehicles, b.GetVehicles());
+        }
     }
 }

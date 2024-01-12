@@ -15,7 +15,10 @@ namespace AnimalFarm
         public void AddToBuilding(Building farm)
         {
             Farm = farm;
-            this.Farm.SetOwner(this);
+            if(Farm.GetOwner() == null)
+            {
+                Farm.SetOwner(this);
+            }
         }
 
         public void SetVehicle(Vehicle vehicle)
@@ -26,6 +29,7 @@ namespace AnimalFarm
             } else
             {
                 Console.Write("Farmer does not have any Home! Set first a Building to the Farmer!");
+                throw new Exception();
             }
         }
 

@@ -25,6 +25,11 @@ namespace AnimalFarm
             vehicles.Add(vehicle);
         }
 
+        public List<Vehicle> GetVehicles()
+        {
+            return this.vehicles;
+        }
+
         public Farmer GetOwner()
         {
             return this.Farmer;
@@ -33,6 +38,7 @@ namespace AnimalFarm
         public void SetOwner(Farmer farmer)
         {
             this.Farmer = farmer;
+            this.Farmer.AddToBuilding(this);
         }
 
         public void AddAnimal(Animal animal)
