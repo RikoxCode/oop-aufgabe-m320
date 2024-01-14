@@ -44,7 +44,6 @@ Mittels Screenrecording präserntieren sie Ihre Arbeit in einem 4-8 minütigen V
 
     .
     ├── programm                # Aufgabe die erledigt wurde
-    │   ├── README.md           # Anleitung
     │   └── ...                 # etc.
     │   
     ├── sonstiges
